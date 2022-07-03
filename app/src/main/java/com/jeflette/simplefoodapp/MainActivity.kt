@@ -2,6 +2,7 @@ package com.jeflette.simplefoodapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jeflette.simplefoodapp.adapter.FoodAdapter
 import com.jeflette.simplefoodapp.databinding.ActivityMainBinding
@@ -22,6 +23,12 @@ class MainActivity : AppCompatActivity() {
         // Set the recycler view with the food list & set the layout manager to linear layout
         binding.rvFood.layoutManager = LinearLayoutManager(this)
         binding.rvFood.adapter = FoodAdapter(foodList)
+        binding.rvFood.addItemDecoration(
+            DividerItemDecoration(
+                this,
+                LinearLayoutManager.VERTICAL
+            )
+        )
     }
 
     override fun onDestroy() {
