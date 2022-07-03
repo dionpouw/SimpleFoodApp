@@ -1,6 +1,5 @@
 package com.jeflette.simplefoodapp.adapter
 
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,9 +26,10 @@ class FoodAdapter(private val data: List<Food>) : RecyclerView.Adapter<FoodAdapt
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         Glide.with(holder.ivFood.context)
-            .load(Uri.parse("res/drawable/ ${data[position].imgResource}"))
+            .load(data[position].imgResource)
             .into(holder.ivFood)
         holder.tvFood.text = data[position].name
     }
+
     override fun getItemCount(): Int = data.size
 }
