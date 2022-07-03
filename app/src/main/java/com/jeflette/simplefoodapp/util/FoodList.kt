@@ -1,20 +1,21 @@
 package com.jeflette.simplefoodapp.util
 
+import com.jeflette.simplefoodapp.R
 import com.jeflette.simplefoodapp.data.model.Food
 
 object FoodList {
     fun provideFoodList(): List<Food> {
         return listOf(
-            Food("Bread", "bread.webp"),
-            Food("Burger", "burger.webp"),
-            Food("Laksa", "laksa.webp"),
-            Food("Lasagna", "lasagna.webp"),
-            Food("Pizza", "pizza.webp"),
-            Food("Spaghetti", "spaghetti.webp"),
-            Food("Steak", "steak.webp"),
-            Food("Sushi", "sushi.webp"),
-            Food("Tomyam", "tomyam.webp"),
-            Food("Tteokbokki", "tteokbokki.webp"),
+            Food("Bread", R.drawable.bread),
+            Food("Burger", R.drawable.burger),
+            Food("Laksa", R.drawable.laksa),
+            Food("Lasagna", R.drawable.lasagna),
+            Food("Pizza", R.drawable.pizza),
+            Food("Spaghetti", R.drawable.spaghetti),
+            Food("Steak", R.drawable.steak),
+            Food("Sushi", R.drawable.sushi),
+            Food("Tomyam", R.drawable.tomyam),
+            Food("Tteokbokki", R.drawable.tteokbokki),
         )
     }
 }
